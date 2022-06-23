@@ -63,7 +63,7 @@ CREATE TABLE ulke
     PRIMARY KEY (ulke_kod, ulke_tel_kod),
     FOREIGN KEY (ulke_ad) REFERENCES yolcu(yolcu_ulke) ON DELETE CASCADE
 );
-
+--check kontrolu
 CREATE TABLE weather
 (
     weather_degree INT CHECK(weather_degree <=50 AND weather_degree >=0),
@@ -90,4 +90,5 @@ WHERE yolcu_id > 0
 ORDER BY yolcu_id DESC;
 
 --Eldeki veriyi guncelleme
-UPDATE yolcu SET yolcu_ad = 'Serena', yolcu_soyad = 'Van der Woodsen', yolcu_ulke = 'USA' yolcu_sehir = 'NEW YORK' WHERE yolcu_ad ='Dogukan';
+UPDATE yolcu SET yolcu_ad = 'Serena', yolcu_soyad = 'Van der Woodsen', yolcu_ulke = 'USA', yolcu_sehir = 'NEW YORK' WHERE yolcu_ad ='Dogukan';
+
